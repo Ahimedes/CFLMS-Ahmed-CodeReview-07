@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="display-4">Travel Details</h2>
+
+    <div *ngIf="location">
+        <h3>{{ location.name }}</h3>
+        <p><img class="logo img-fluid" style="width: 30vw; height: 20vw;" src="{{ location.teaser }}"></p>
+        <h4>Price: {{ location.price | currency }}</h4>
+        <p><b>Start date(s):</b></p>
+        <p>{{ location.startdate1 }}</p>
+        <p>{{ location.startdate2 }}</p>
+        <p>{{ location.startdate3 }}</p>
+        <p>Duration: </p>
+        <p>{{ location.duration }}</p>
+        <p>Info: </p>
+        <p>{{ location.text }}</p>
+        <button class="btn btn-lg border border-dark" (click)="addToCart(location)">Buy</button>
+
+    </div>
+</div>
